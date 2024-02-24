@@ -1,6 +1,14 @@
 dependencies:
   - OpenZeppelin/openzeppelin-contracts@3.4.0
   - smartcontractkit/chainlink-brownie-contracts@1.1.1
+reports:
+  exclude_contracts:
+    - LinkToken
+    - VRFCoordinatorMock
+    - ERC721
+    - EnumerableMap
+    - Address
+    - EnumerableSet
 compiler:
   solc:
     remappings:
@@ -12,10 +20,12 @@ wallets:
 networks:
   development:
     keyhash: "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c"
-    fee: 5000000000000000
+    fee: 1000000000000000
 
   sepolia:
     vrf_coordinator: "0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625"
     link_token: "0x779877A7B0D9E8603169DdbD7836e478b4624789"
     keyhash: "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c"
-    fee: 5000000000000000 # 0.005
+    fee: 1000000000000000 # 0.005
+settings:
+  gas_limit: "2074044"
